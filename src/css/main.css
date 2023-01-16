@@ -18,7 +18,7 @@
 
 * {
   font-size: 62.5%;
-  font-family: 'akkurat';
+  font-family: 'akkurat', 'Roboto';
   /*src: local('Akkurat'), url(fonts/Akkurat.ttf), format('truetype');*/
 }
 
@@ -163,33 +163,35 @@ main {
 
 .navigation {
   position: absolute;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 0;
   z-index: 1;
 
-  width: 100%;
-  height: 10rem;
+  width: 32rem;
   margin-bottom: 2rem;
-  padding: 0 4rem;
 }
 
-.navigation__button {
-  width: 8rem;
-  height: 8rem;
+
+.navigation__link {
+  width: 100%;
+
+  font-size: 8rem;
+  color: white;
 
   border: none;
   background-color: transparent;
 }
 
-.navigation__button__img {
-  width: 100%;
+.navigation__link__img {
+  float: left;
+  margin-right: 2rem;
+  width: 10rem;
   height: 100%;
 }
 
-.navigation__button--left {
-  float: left;
-}
-
-.navigation__button--right {
+.navigation__link__text {
   float: right;
+  font-size: 8rem;
+  color: white;
 }
