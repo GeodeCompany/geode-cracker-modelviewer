@@ -1,0 +1,195 @@
+@font-face {
+    font-family: 'akkurat';
+    src: url('../font/akkurat.ttf');
+}
+
+:root{
+  --background-color: #202020;
+  --banner-background-dark-color: #2F3033;
+  --banner-background-light-color: #3C3E42;
+  --naturalis-red-color: #F93F35;
+  --naturalis-green-color: #489F58;
+  --error-color: #FA6B00;
+  --inactive-red-color: #B96560;
+  --inactive-green-color: #A5D7B9;
+  --white-color: #FFFFFF;
+  --black-color: #000000;
+}
+
+* {
+  font-size: 62.5%;
+  font-family: 'akkurat';
+  /*src: local('Akkurat'), url(fonts/Akkurat.ttf), format('truetype');*/
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+path {
+  width: 25rem;
+  height: 36rem;
+}
+
+main {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  justify-content: center;
+}
+
+.button{
+  position: relative;
+
+  color: var(--naturalis-green-color);
+  font-size: 1.8rem;
+  text-align: center;
+
+  border: none;
+  border-radius: 0.4rem;
+  background-color: var(--white-color);
+}
+
+.button:hover{
+  cursor: pointer;
+}
+
+.button > img{
+  position: absolute;
+  right: 1.4rem;
+}
+
+.button:disabled{
+  background-color: transparent;
+}
+
+.button--inactive{
+  position: relative;
+
+  color: var(--inactive-green-color);
+  font-size: 1.8rem;
+  text-align: center;
+
+  border: solid .2rem var(--inactive-green-color);
+  border-radius: 0.4rem;
+  background-color: transparent;
+}
+
+.button--green{
+  color: var(--white-color);
+  background-color: var(--naturalis-green-color);
+}
+
+.button--red{
+  color: var(--white-color);
+  background-color: var(--naturalis-red-color);
+}
+
+.button--green:disabled, .button--green--inactive{
+  background-color: transparent;
+  color: var(--inactive-green-color);
+  border: solid .2rem var(--inactive-green-color);
+}
+
+.button--red:disabled, .button--red--inactive{
+  background-color: transparent;
+  color: var(--inactive-red-color);
+  border: solid .2rem var(--inactive-red-color);
+}
+
+.button--ar{
+  position: absolute;
+  width: 30%;
+  top: 25rem;
+  margin-left: 2rem;
+  color: var(--naturalis-green-color);
+  background-color: var(--white-color);
+  border: 1rem solid none;
+  border-radius: 2rem;
+  padding: 2rem;
+  font-size: 4rem;
+}
+
+.banner{
+  z-index: 2;
+  width: 100vw;
+  max-height: 25rem;
+}
+
+.banner--top {
+  position: absolute;
+  top: 0;
+}
+
+.banner--bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+.banner__figure {
+  width: 100%;
+  max-height: 25rem;
+}
+
+.banner__figure__image {
+  width: 100%;
+  max-height: 25rem;
+}
+
+.loading{
+  display: block;
+  color: var(--white-color);
+  font-size: 12rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modelviewer {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.navigation {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 10rem;
+  margin-bottom: 2rem;
+  padding: 0 4rem;
+}
+
+.navigation__button {
+  width: 8rem;
+  height: 8rem;
+
+  border: none;
+  background-color: transparent;
+}
+
+.navigation__button__img {
+  width: 100%;
+  height: 100%;
+}
+
+.navigation__button--left {
+  float: left;
+}
+
+.navigation__button--right {
+  float: right;
+}
